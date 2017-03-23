@@ -86,12 +86,20 @@ class App extends Component {
     const passFilter = this.passFilter;
     return (
       <div className='App'>
-        <Filter updateFilter={this.updateFilter} filter={this.state.filter} />
+        <div className='App__top'>
+          <img className='twitch-logo' src='../twitch-logo.png' alt='twitch'/>
+          <Filter updateFilter={this.updateFilter} filter={this.state.filter} />
+        </div>
+        <div className='channel-card-container'>
         {
           Object.keys(data).filter(u => { return passFilter(data[u].online) }).map((c,i) => {
             return <ChannelCard key={i} {...data[c]} />
           })
         }
+        </div>
+        <div className='channel__arrows hidden-xs'>
+          ⇦ ⇨
+        </div>
       </div>
     );
   }

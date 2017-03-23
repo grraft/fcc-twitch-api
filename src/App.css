@@ -1,28 +1,153 @@
 .App {
   text-align: center;
+  margin-top: 40px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App__top {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  background-color: #7c54c5;
+  width: 100%;
+  padding: 20px 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.twitch-logo {
+  width: 200px;
 }
 
-.App-intro {
-  font-size: large;
+.channel__arrows {
+  font-size: 1.75em;
+  color: rgba(255, 255, 255, 0.32);
+  position: fixed;
+  text-align: center;
+  left: 7%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.channel-card-container {
+  padding: 10px;
+  display: flex;
+  max-width: 100%;
+  margin-top: 150px;
 }
 
 .channel-card {
   /*background-color: red;*/
+  width: 300px;
+  height:300px;
+  color: white;
+  margin: 10px;
+  display: block;
+}
+
+.channel__subheading {
+  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+}
+
+.channel__content {
+  padding: 10px;
+}
+
+.channel__link {
+  color: #e7daff;
+  font-size: small;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.channel__status-bar {
+  display: flex;
+  padding-top: 8px;
+}
+
+.channel__description {
+  text-align: left;
+  padding: 0 25px;
+  font-weight: 200;
+}
+
+.channel__status-bar--stat {
+  min-width: 50%;
+}
+
+.channel__online {
+  width: inherit;
+  height: inherit;
+}
+
+.channel__offline {
+  width: inherit;
+  height: inherit;
+}
+
+.channel__online-image {
+  width: inherit;
+  height: inherit;
+  /*border-radius: 2%;*/
+}
+
+.channel__online-overlay {
+  background-color: rgba(64, 167, 68, 0.87);
+  height: inherit;
+}
+
+.channel__content--top {
+  height: 90%;
+}
+
+.channel__offline-overlay {
+  background-color: rgba(80, 36, 160, 0.78);
+  height: inherit;
+}
+
+.channel__online--link {
+  color: #FF9800;
+}
+
+.channel__hr {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.twitch-button {
+  background-color: white;
+  padding: 7px;
+  border-width: thin;
+  border-style: solid;
+  border-color: rgb(125, 91, 190);
+  text-decoration: none;
+  color: #7d5bbe;
+  font-size: small;
+  font-weight: 500;
+}
+
+.twitch-button:hover {
+  background-color: #dedede;
+}
+
+.twitch-button:focus {
+  outline: 0;
+}
+
+.twitch-button--active {
+  background-color: lightpink !important;
+}
+
+/* responsive design for mobile */
+@media (max-width: 720px) {
+  .App__top {
+    background-color: #433f4a;
+  }
+  .twitch-logo {
+    width: 150px;
+  }
+  .channel-card-container {
+    display: block;
+  }
+  .channel-card {
+    width: 97%;
+  }
+  .hidden-xs {
+    display: none;
+  }
 }
